@@ -36,6 +36,31 @@ Send a Geometry Pose msg to call the service
 
 https://github.com/N4SK4R/ROS2_tf2_Broadcaster/assets/115721424/3744acbb-10ba-40af-9f06-e63e5aaa1975
 
+# using the Dockerised version of the repository : 
+#### Pre-installation:
+
+1. **Install Xhost for GUI:**
+   ```bash
+   xhost +local:docker
+   ```
+
+#### Containerizing:
+
+1. **Build the Dockerfile:**
+   ```bash
+   docker build -t my_ros_container .
+   ```
+
+2. Run the docker container : 
+    ```
+    docker run -it --rm --net=host --privileged \
+        --env="DISPLAY" \
+        --env="QT_X11_NO_MITSHM=1" \
+        --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+        -v "~/Path_of_your_choice/ros2_ws/src:/ros2_ws/src" \
+        -p 2222:22 \
+        ros2-humble-gazebo
+    ```
 
 
 
