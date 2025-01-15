@@ -1,5 +1,5 @@
-# ROS2_tf2_Broadcaster
-Using Rviz Marker Messages for Visualizing  tf2_ros/transform_broadcaster
+# ROS2
+Design and implementation of a multi-agent path planning system using the Robot Operating System 2 (ROS2) framework. The system leverages ROS2’s various communication models to enable realtime efficient coordination between multiple autonomous agents operating in a shared multi-level environment
 
 **System Info:** These packages were tested on Ubuntu 22.04 with ROS Humble.
 
